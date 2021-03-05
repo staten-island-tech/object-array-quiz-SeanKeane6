@@ -19,28 +19,39 @@ const presidents = [
 const demIndex = presidents.findIndex(presidents => {
   if (presidents = party = "R"){
     return true;
-  } else{
-    return false;
   }
-
+  
 });
 
-console.log(demIndex);
-console.log(presidents[demIndex]);
-
-//no progress just returns Trump
-
-//2)Filter all presidents to leave only one term Republican presidents HINT use If statement
 
 //3) return only the last three presidents
 
+
+
 //4) log all dems who served 2 terms. HINT use chain filter, filter and slice
+
+const goodDems = presidents.filter(function(president){
+  if(
+    president.terms === 2 && president.party === "D"
+  ){
+    return true;
+  }
+  
+});
+
+console.log(goodDems);
 
 //BONUS write a script to check if LBJ was a 2 term president. IF he was then alert("LBJ served two terms") else alert "LBJ was one and done"
 
-/*if(name:= "Lyndon Johnson", party:="D"){
-  console.log("LBJ served two terms")
-}
+const LBJ = presidents.findIndex(president => president.name === "Lyndon Johnson");
+
+console.log(LBJ)
+
+const johnson = (function(lyndon){
+  if(terms === 2){
+    return("LBJ served two terms")
+  }
 else{
-  console.log("LBJ was one and done")
-}*/
+  return("LBJ was one and done")
+}
+});
