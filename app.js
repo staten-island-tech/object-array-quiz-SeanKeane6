@@ -24,9 +24,10 @@ const demIndex = presidents.findIndex(presidents => {
 });
 
 
-//3) return only the last three presidents
+//3) return only the first three presidents
 
 
+const last3 = presidents.slice(-3)
 
 //4) log all dems who served 2 terms. HINT use chain filter, filter and slice
 
@@ -43,15 +44,14 @@ console.log(goodDems);
 
 //BONUS write a script to check if LBJ was a 2 term president. IF he was then alert("LBJ served two terms") else alert "LBJ was one and done"
 
-const LBJ = presidents.findIndex(president => president.name === "Lyndon Johnson");
+const lbj = presidents.filter(president => president.name === "Lyndon Johnson");
 
-console.log(LBJ)
-
-const johnson = (function(lyndon){
-  if(terms === 2){
-    return("LBJ served two terms")
+  if(lbj[0].terms === 2){
+    alert ("LBJ served two terms")
   }
 else{
-  return("LBJ was one and done")
-}
-});
+  alert ("LBJ was one and done")
+};
+
+console.log(lbj);
+
