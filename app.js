@@ -16,8 +16,15 @@ const presidents = [
 //Challenge Questions
 //1) Filter all presidents, leaving only the Democratic ones
 
-const demIndex = presidents.findIndex(presidents => {
-  if (presidents = party = "R"){
+const demOnly = presidents.filter(president => president.party === "D");
+
+
+//2)Filter all presidents to leave only one term Republican presidents HINT use If statement
+
+const rep = presidents.filter(function(president){
+  if(
+    president.terms === 1 && president.party === "R"
+  ){
     return true;
   }
   
